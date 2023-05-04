@@ -43,3 +43,39 @@ pre {
 	tab-size: 5;
 	letter-spacing: 10%;
 }
+
+* {
+	font-family: 'Roboto', Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: 900;
+
+	font-display: swap;
+}
+
+span {
+	font-size: larger;
+
+	font-weight: lighter;
+
+	/* font-style: italic; */
+}
+
+p {
+	font-stretch: expanded;
+}
+
+.test {
+	display: none;
+}
+
+.block {
+	display: inline-block;
+	background: rgb(208, 208, 208);
+	
+	margin: auto;
+
+	width: 100%;
+
+	padding: 15px;
+}
+
