@@ -14,11 +14,63 @@
 	</div>
 
 	<div class="ad">
-		{{#with ad}}
-		<div class="ad_text">
-			<span class="ad_badge">{{text}}</span>: <a href="{{url}}"></a>
+		<div class="logo_ad">
+			<span class="badge_ad">Ad</span>
+			{{#with ad}}
+			<div class="ad_text">
+				<span class="ad_url">{{text}}: {{url}}</span>
+			</div>
+			{{/with}}
 		</div>
-		{{/with}}
+
+		<span>{{userOnline}}</span>
 	</div>
 	{{/with}}
 </header>
+
+<div class="hero">
+	{{#with hero}}
+	<h1 class="hero_title">{{title}}</h1>
+	<p class="hero_description">{{description}}</p>
+	<a class="button" href="{{button.url}}">{{button.text}}</a>
+	{{/with}}
+</div>
+
+<div class="about">
+	{{#with about}}
+	<h1 class="about_heading">{{heading}}</h1>
+	<p class="about_info">{{info}}</p>
+	{{/with}}
+</div>
+
+<div class="list_header">
+	<h2 class="list_title">Our Articles</h2>
+	<button class="category_button">View All</button>
+</div>
+
+<div class="articles_block">
+	{{#each articles}}
+	<div class="articles_card">
+		<img src='{{photo}}' alt='articles_image' class='articles_image'></img>
+		<h2 class="articles_name">{{name}}</h2>
+		<p class="articles_description">{{description}}</p>
+		<button class="articles_button">Read All</button>
+	</div>
+	{{/each}}
+</div>
+
+<footer class="footer">
+
+	{{#with footer}}
+	<div class="pages">
+		{{#each pages}}
+		<a href="{{path}}" class="path_link">{{name}}</a>
+		{{/each}}
+	</div>
+
+	<div class="copyright">
+		<span class="footer_copyright">{{copyright}}</span>
+	</div>
+	{{/with}}
+
+</footer>
