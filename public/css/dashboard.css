@@ -173,18 +173,16 @@ body {
 		position: relative;
 	}
 
-	.main_double {
-		width: 100%;
-		max-width: 1300px;
-		margin: auto;
-	}
-
 	.box_double {
-		background-color: var(--color-white);
-		padding: var(--spacing-5);
-		border-radius: 16px;
-		gap: var(--spacing-9);
-	}
+  		background-color: var(--color-white);
+ 		padding: var(--spacing-5);
+  		border-radius: 16px;
+  		gap: var(--spacing-9);
+ }
+
+ .first {
+	margin-right: var(--spacing-9);
+ }
 }
 
 @layer element {
@@ -287,9 +285,25 @@ body {
 	}
 
 	.divider {
-		width: 762px;
-		height: 1px;
-		color: var(--color-light);
+		width: 100%;
+		border-bottom: #000;
+	}
+
+	.list {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 2fr;
+	}
+
+	.radio-item {
+		display: flex;
+		gap: var(--spacing-1);
+		align-items: center;
+	}
+	
+	.form-radio {
+		display: grid;
+		gap: var(--spacing-2);
 	}
 }
 
@@ -400,11 +414,10 @@ body {
 		background-color: var(--color-white);
 	}
 
-	.text_big {
+	.text_heading {
 		font-size: var(--size-4);
 		font-weight: 600;
 		color: var(--color-black);
-		border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 	}
 }
 
